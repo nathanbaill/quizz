@@ -71,8 +71,8 @@ const routes = [
     MatProgressBarModule
   ],
   providers: [
-    ApiService, 
-    AuthService, 
+    ApiService,
+    AuthService,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
