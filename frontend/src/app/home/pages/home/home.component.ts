@@ -13,7 +13,7 @@ time: number = 5;
 
   ngOnInit(): void {
     setInterval(() => { if (this.time > 0) this.time--; }, 1000);
-    
+
   }
 
 }
