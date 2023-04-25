@@ -29,6 +29,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { PlayResultComponent } from './home/components/play/play-result/play-result.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
+
 const routes = [
   { path: '', component: HomeComponent },
   { path: 'quizzes', component: QuizzesComponent },

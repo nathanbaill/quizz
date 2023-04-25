@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Question } from 'src/app/home/interfaces/question.interface';
 
 @Component({
@@ -7,13 +7,8 @@ import { Question } from 'src/app/home/interfaces/question.interface';
   styleUrls: ['./home.component.scss']
 })
 
-export class HomeComponent implements OnInit {
-time: number = 5;
+export class HomeComponent {
+
   constructor() { }
-
-  ngOnInit(): void {
-    setInterval(() => { if (this.time > 0) this.time--; }, 1000);
-
-  }
 
 }

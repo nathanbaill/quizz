@@ -8,13 +8,13 @@ import {takeWhile, tap} from 'rxjs/operators';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent {
   title = 'quiz app';
   counter = 10;
   hasExecuted = false;
 
-  ngOnInit(): void {
-    if (!this.hasExecuted)
+  constructor() {
+    if (this.hasExecuted)
       timer(1000, 1000) //Initial delay 1 seconds and interval countdown also 1 second
         .pipe(
           takeWhile( () => this.counter > 0 ),
@@ -22,13 +22,13 @@ export class AppComponent implements OnInit{
         )
 
         .subscribe( () => {
-          if (this.counter === 0 && this.hasExecuted) {
+          if (this.counter === 0) {
             //add you more code
-            document.location.href="http://localhost:4200";
+            document.location.href = "http://localhost:4200";
+            this.hasExecuted = true;
           }
 
         } );
-    this.hasExecuted;
   }
 }
 
